@@ -1,0 +1,14 @@
+@media (max-width: 768px) {
+    .movie-details-container {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar .container {
+        padding: 0 var(--spacing-sm);
+    }
+
+    .movie-banner {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}

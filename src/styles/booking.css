@@ -1,0 +1,27 @@
+.booking-summary {
+    background-color: var(--surface-color);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    margin-top: var(--spacing-xl);
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.1rem;
+}
+
+.total-row {
+    border-top: 1px solid var(--border-color);
+    padding-top: var(--spacing-md);
+    margin-top: var(--spacing-md);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.payment-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: var(--spacing-xl) 0;
+}

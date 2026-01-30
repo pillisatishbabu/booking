@@ -1,0 +1,31 @@
+:root {
+  /* Colors */
+  --primary-color: #e50914; /* Netflix-like red */
+  --primary-hover: #b20710;
+  --secondary-color: #ffffff;
+  --background-color: #141414;
+  --surface-color: #1f1f1f;
+  --text-color: #e5e5e5;
+  --text-secondary: #a3a3a3;
+  --border-color: #333333;
+  --success-color: #46d369;
+  --error-color: #e50914; /* Same as primary */
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
