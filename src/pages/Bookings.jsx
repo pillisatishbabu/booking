@@ -7,26 +7,26 @@ const Bookings = () => {
     const { bookings } = useSelector((state) => state.booking);
 
     return (
-        <div className="container" style={{ paddingTop: '2rem' }}>
-            <h2 style={{ marginBottom: '2rem' }}>My Bookings</h2>
+        <div className="container booking-container">
+            <h2 className="booking-header">My Bookings</h2>
 
             {bookings.length === 0 ? (
-                <div style={{ textAlign: 'center', color: 'var(--text-secondary)', padding: '4rem 0' }}>
-                    <p style={{ fontSize: '1.2rem', marginBottom: '1rem' }}>No bookings found.</p>
+                <div className="empty-bookings">
+                    <p>No bookings found.</p>
                     <Link to="/" className="btn btn-primary">Book a Movie</Link>
                 </div>
             ) : (
-                <div style={{ display: 'grid', gap: '1rem' }}>
+                <div className="bookings-grid">
                     {bookings.map((booking) => (
-                        <div key={booking.id} className="booking-summary" style={{ marginTop: 0 }}>
-                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-                                <h3 style={{ color: 'var(--primary-color)' }}>{booking.movie}</h3>
-                                <span style={{ color: 'var(--text-secondary)' }}>ID: {booking.id}</span>
+                        <div key={booking.id} className="booking-card">
+                            <div className="booking-header-row">
+                                <h3 className="booking-movie-title">{booking.movie}</h3>
+                                <span className="booking-id">ID: {booking.id}</span>
                             </div>
 
                             <div className="summary-row">
-                                <span>Date & Time</span>
-                                <span>{booking.show.time}</span>
+                                <span>Show Info</span>
+                                <span>{booking.show.time} • {booking.show.theatreName}</span>
                             </div>
                             <div className="summary-row">
                                 <span>Seats</span>

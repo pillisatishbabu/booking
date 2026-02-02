@@ -15,7 +15,7 @@ const SeatSelection = () => {
     const dispatch = useDispatch();
 
     const { selectedSeats, selectedShow } = useSelector((state) => state.booking);
-    const { movies } = useSelector((state) => state.movies);
+    const { items: movies } = useSelector((state) => state.movies);
     const movie = movies.find(m => m.id === parseInt(id));
 
     useEffect(() => {
@@ -62,12 +62,14 @@ const SeatSelection = () => {
 
     return (
         <div className="container seat-map-container">
-            <h2>Select Seats - {movie.title}</h2>
-            <p style={{ marginBottom: '20px', color: 'var(--text-secondary)' }}>
+            <h2 className="seat-header">Select Seats - {movie.title}</h2>
+            <p className="seat-sub-header">
                 {selectedShow?.time} | {selectedShow?.type}
             </p>
 
-            <div className="screen"></div>
+            <div className="screen-container">
+                <div className="screen"></div>
+            </div>
 
             <div className="seats-grid">
                 {generateSeats()}
@@ -75,30 +77,41 @@ const SeatSelection = () => {
 
             <div className="seat-legend">
                 <div className="legend-item">
-                    <div className="legend-color" style={{ backgroundColor: 'var(--surface-color)', border: '1px solid var(--border-color)' }}></div>
+                    <div className="legend-color available"></div>
                     <span>Available</span>
                 </div>
                 <div className="legend-item">
-                    <div className="legend-color" style={{ backgroundColor: 'var(--success-color)' }}></div>
+                    <div className="legend-color selected"></div>
                     <span>Selected</span>
                 </div>
                 <div className="legend-item">
-                    <div className="legend-color" style={{ backgroundColor: 'var(--border-color)' }}></div>
+                    <div className="legend-color occupied"></div>
                     <span>Occupied</span>
                 </div>
             </div>
 
-            <div style={{ marginTop: '2rem', textAlign: 'center' }}>
-                <h3 style={{ marginBottom: '1rem' }}>
-                    Total: ${selectedSeats.length * TICKET_PRICE}
-                </h3>
+            <div className="booking-summary glass">
+                {selectedSeats.length > 0 ? (
+                    <>
+                        <div className="summary-info">
+                            <span className="summary-label">Selected Seats:</span>
+                            <span className="summary-value">{selectedSeats.join(', ')}</span>
+                        </div>
+                        <div className="summary-info">
+                            <span className="summary-label">Total Amount:</span>
+                            <span className="summary-value price">${selectedSeats.length * TICKET_PRICE}</span>
+                        </div>
+                    </>
+                ) : (
+                    <p className="no-seats-msg">No tickets selected. Please pick your seats to proceed.</p>
+                )}
+
                 <button
-                    className="btn btn-primary"
+                    className={`btn btn-primary proceed-btn ${selectedSeats.length === 0 ? 'disabled' : ''}`}
                     disabled={selectedSeats.length === 0}
                     onClick={handleProceed}
-                    style={{ opacity: selectedSeats.length === 0 ? 0.5 : 1 }}
                 >
-                    Proceed to Payment
+                    Confirm Booking
                 </button>
             </div>
         </div>

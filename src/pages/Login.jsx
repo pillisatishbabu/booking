@@ -30,7 +30,7 @@ const Login = () => {
         <div className="auth-container">
             <div className="auth-card">
                 <h2 className="auth-title">Sign In</h2>
-                {error && <div style={{ color: 'var(--error-color)', marginBottom: '1rem' }}>{error}</div>}
+                {error && <div className="error-message">{error}</div>}
                 <form onSubmit={handleSubmit} className="auth-form">
                     <div className="form-group">
                         <input
@@ -52,15 +52,14 @@ const Login = () => {
                     </div>
                     <button
                         type="submit"
-                        className="btn btn-primary"
-                        style={{ width: '100%', marginTop: '1rem' }}
+                        className="btn btn-primary auth-btn"
                         disabled={loading}
                     >
                         {loading ? 'Signing In...' : 'Sign In'}
                     </button>
 
                     <div className="auth-footer">
-                        <p>New to MovieTix? <span className="auth-link" onClick={() => navigate('/signup')}>Sign up now</span>.</p>
+                        <p>New to TICKETnow? <span className="auth-link" onClick={() => navigate('/signup')}>Sign up now</span>.</p>
                     </div>
                 </form>
             </div >

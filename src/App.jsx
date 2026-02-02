@@ -11,6 +11,14 @@ import Shows from './pages/Shows';
 import SeatSelection from './pages/SeatSelection';
 import Payment from './pages/Payment';
 import Bookings from './pages/Bookings';
+import AIRecommendations from './pages/AIRecommendations';
+import Contact from './pages/Contact';
+import ProfileSettings from './pages/ProfileSettings';
+import Refund from './pages/Refund';
+import Wallet from './pages/Wallet';
+import AIAssistant from './components/AIAssistant';
+
+// ... (keep Layout styles import)
 
 // Protected Route Wrapper
 const ProtectedRoute = ({ children }) => {
@@ -23,14 +31,31 @@ const ProtectedRoute = ({ children }) => {
 
 const App = () => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <div className="app-layout">
       <Navbar />
-      <main style={{ flex: 1 }}>
+      <main className="main-content">
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/" element={<Home />} />
           <Route path="/movie/:id" element={<MovieDetails />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route
+            path="/ai-recommendations"
+            element={
+              <ProtectedRoute>
+                <AIRecommendations />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/profile"
+            element={
+              <ProtectedRoute>
+                <ProfileSettings />
+              </ProtectedRoute>
+            }
+          />
           <Route
             path="/shows/:id"
             element={
@@ -63,9 +88,26 @@ const App = () => {
               </ProtectedRoute>
             }
           />
+          <Route
+            path="/refund"
+            element={
+              <ProtectedRoute>
+                <Refund />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/wallet"
+            element={
+              <ProtectedRoute>
+                <Wallet />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </main>
       <Footer />
+      <AIAssistant />
     </div>
   );
 };

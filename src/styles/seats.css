@@ -2,73 +2,184 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: var(--spacing-xl) 0;
+    padding: 8rem 0 4rem 0;
+}
+
+.seat-header {
+    margin-bottom: 0.5rem;
+}
+
+.seat-sub-header {
+    margin-bottom: 3rem;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+}
+
+/* Screen */
+.screen-container {
+    perspective: 1000px;
+    margin-bottom: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .screen {
     width: 80%;
-    height: 50px;
-    background-color: #fff;
-    transform: perspective(1000px) rotateX(-10deg);
-    box-shadow: 0 20px 50px rgba(255, 255, 255, 0.4);
-    margin-bottom: var(--spacing-xxl);
-    border-radius: var(--radius-sm);
-    opacity: 0.5;
+    height: 60px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+    transform: rotateX(-30deg) scale(0.9);
+    box-shadow: 0 25px 60px -12px rgba(255, 255, 255, 0.35);
+    border-radius: 50% 50% 0 0 / 20% 20% 0 0;
+    opacity: 0.6;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Grid */
 .seats-grid {
-    display: grid;
-    gap: var(--spacing-sm);
-    margin-bottom: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
 .seat-row {
     display: flex;
-    gap: var(--spacing-sm);
+    gap: 12px;
     justify-content: center;
 }
 
 .seat {
-    width: 30px;
-    height: 30px;
-    background-color: var(--surface-color);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-sm);
+    width: 36px;
+    height: 36px;
+    border-radius: 8px 8px 12px 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     cursor: pointer;
-    transition: all var(--transition-fast);
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+.seat::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 10%;
+    width: 80%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
 }
 
 .seat:not(.occupied):hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px var(--color-primary);
 }
 
 .seat.selected {
-    background-color: var(--success-color);
-    border-color: var(--success-color);
+    background-color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 10px var(--color-secondary);
+    transform: translateY(-2px);
 }
 
 .seat.occupied {
-    background-color: var(--border-color);
+    background-color: #334155;
+    border-color: transparent;
     cursor: not-allowed;
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
+/* Legend */
 .seat-legend {
     display: flex;
-    gap: var(--spacing-lg);
-    margin-top: var(--spacing-lg);
+    gap: 2rem;
+    margin-top: 4rem;
+    padding: 1.25rem 2.5rem;
+    border-radius: var(--radius-full);
 }
 
 .legend-item {
     display: flex;
     align-items: center;
-    gap: var(--spacing-sm);
+    gap: 0.75rem;
     font-size: 0.9rem;
-    color: var(--text-secondary);
+    color: var(--color-text-muted);
 }
 
 .legend-color {
-    width: 20px;
-    height: 20px;
-    border-radius: var(--radius-sm);
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+}
+
+.legend-color.available {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.legend-color.selected {
+    background-color: var(--color-secondary);
+    box-shadow: 0 0 10px var(--color-secondary);
+}
+
+.legend-color.occupied {
+    background-color: #334155;
+    opacity: 0.4;
+}
+
+/* Summary */
+.booking-summary {
+    margin-top: 4rem;
+    text-align: center;
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.summary-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.summary-label {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+}
+
+.summary-value {
+    color: var(--color-text-main);
+    font-weight: 600;
+}
+
+.summary-value.price {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+}
+
+.no-seats-msg {
+    color: var(--color-accent);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.proceed-btn {
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    font-size: 1.1rem;
+    width: 100%;
+}
+
+.proceed-btn.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    background: var(--color-bg-surface);
+    border: 1px dashed var(--glass-border);
 }

@@ -41,7 +41,7 @@ const SignUp = () => {
             <div className="auth-card">
                 <h2 className="auth-title">Sign Up</h2>
                 {(error || localError) && (
-                    <div style={{ color: 'var(--error-color)', marginBottom: '1rem' }}>
+                    <div className="error-message">
                         {localError || error}
                     </div>
                 )}
@@ -84,8 +84,7 @@ const SignUp = () => {
                     </div>
                     <button
                         type="submit"
-                        className="btn btn-primary"
-                        style={{ width: '100%', marginTop: '1rem' }}
+                        className="btn btn-primary auth-btn"
                         disabled={loading}
                     >
                         {loading ? 'Creating Account...' : 'Sign Up'}

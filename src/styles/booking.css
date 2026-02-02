@@ -1,27 +1,314 @@
-.booking-summary {
-    background-color: var(--surface-color);
-    padding: var(--spacing-lg);
-    border-radius: var(--radius-md);
-    margin-top: var(--spacing-xl);
+/* Booking Styles */
+.booking-container {
+    padding-top: 8rem;
+    padding-bottom: 4rem;
 }
 
-.summary-row {
+.booking-header {
+    margin-bottom: 2.5rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/* Date Selector */
+.date-selector {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding: 0.5rem 0.5rem 1.5rem 0.5rem;
+    margin-bottom: 3rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.date-selector::-webkit-scrollbar {
+    display: none;
+}
+
+.date-card {
+    min-width: 90px;
+    height: 110px;
+    background: var(--color-bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+}
+
+.date-card:hover {
+    transform: translateY(-8px);
+    background: var(--glass-bg);
+    border-color: var(--color-primary);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.date-card.active {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    box-shadow: 0 8px 25px var(--color-primary-glow);
+}
+
+.date-card.active .date-day,
+.date-card.active .date-num,
+.date-card.active .date-month {
+    color: #fff !important;
+    opacity: 1;
+}
+
+.date-day {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: 6px;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.date-num {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.date-month {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+.booking-page-header {
+    margin-bottom: 3rem;
+}
+
+.booking-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+    margin-bottom: 1rem;
+}
+
+.booking-meta {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Theatre Section */
+.section-title-small {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+.theatres-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.theatre-card {
+    background: var(--color-bg-card);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.theatre-card:hover {
+    border-color: var(--color-primary-glow);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+.theatre-info {
+    padding: 2rem;
     display: flex;
     justify-content: space-between;
-    margin-bottom: var(--spacing-sm);
-    font-size: 1.1rem;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--glass-border);
 }
 
-.total-row {
-    border-top: 1px solid var(--border-color);
-    padding-top: var(--spacing-md);
-    margin-top: var(--spacing-md);
+.theatre-name {
+    font-size: 1.25rem;
     font-weight: 700;
-    font-size: 1.5rem;
+    color: var(--color-text-main);
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.payment-form {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: var(--spacing-xl) 0;
+.heart-icon {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    cursor: pointer;
+}
+
+.theatre-tags {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.theatre-rating {
+    color: #fbbf24;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.feature-tag {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid var(--glass-border);
+}
+
+.theatre-distance {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.theatre-shows {
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.show-slot-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.show-time-chip {
+    background: transparent;
+    border: 1px solid var(--border-subtle);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-sm);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.show-time-chip:hover {
+    border-color: var(--color-primary);
+    background: rgba(139, 92, 246, 0.05);
+}
+
+.show-time {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 4px;
+}
+
+.show-tech {
+    font-size: 0.75rem;
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.show-status {
+    font-size: 0.7rem;
+    color: #22c55e;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.no-theatres {
+    text-align: center;
+    padding: 4rem;
+    color: var(--color-text-muted);
+    background: var(--glass-bg);
+    border-radius: var(--radius-lg);
+    border: 1px dashed var(--glass-border);
+}
+
+/* Bookings List */
+.bookings-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.booking-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.booking-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--color-primary);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.booking-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.booking-movie-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 0;
+}
+
+.booking-id {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    font-family: monospace;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.empty-bookings {
+    text-align: center;
+    padding: 6rem 2rem;
+    background: var(--glass-bg);
+    border-radius: var(--radius-lg);
+    border: 1px dashed var(--glass-border);
+    margin-top: 2rem;
+}
+
+.empty-bookings p {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+}
+
+/* Payment Layout Fixes */
+.payment-container {
+    margin-top: 2rem;
 }

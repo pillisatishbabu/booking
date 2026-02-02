@@ -1,56 +1,89 @@
+/* Auth Styles */
 .auth-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 70px);
-    /* 100vh - navbar height */
+    min-height: calc(100vh - 80px);
+    /* Adjust based on new navbar height */
+    padding: 2rem;
 }
 
 .auth-card {
-    background-color: rgba(0, 0, 0, 0.75);
-    padding: 60px 68px 40px;
-    border-radius: 4px;
+    background: var(--surface-dark);
+    border: 1px solid var(--border-subtle);
+    padding: 3rem;
+    border-radius: var(--radius-lg);
     width: 100%;
     max-width: 450px;
+    box-shadow: var(--shadow-lg);
 }
 
 .auth-title {
     font-size: 2rem;
     font-weight: 700;
-    margin-bottom: var(--spacing-xl);
+    margin-bottom: 2rem;
+    color: #fff;
+    text-align: center;
+}
+
+.error-message {
+    color: var(--color-accent);
+    background: rgba(244, 63, 94, 0.1);
+    border: 1px solid rgba(244, 63, 94, 0.2);
+    padding: 0.75rem;
+    border-radius: var(--radius-sm);
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    text-align: center;
 }
 
 .auth-form {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-md);
+    gap: 1.25rem;
 }
 
 .form-group input {
     width: 100%;
-    background: #333;
-    border-radius: 4px;
-    border: none;
-    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-sm);
+    color: var(--color-text-main);
     height: 50px;
-    padding: 16px 20px;
+    padding: 0 1.25rem;
     outline: none;
+    transition: all 0.3s ease;
+    font-size: 1rem;
 }
 
 .form-group input:focus {
-    background: #454545;
+    border-color: var(--color-primary);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1);
+}
+
+.auth-btn {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.8rem;
+    font-size: 1.1rem;
 }
 
 .auth-footer {
-    margin-top: var(--spacing-xl);
-    color: #737373;
+    margin-top: 2rem;
+    color: var(--color-text-muted);
+    text-align: center;
+    font-size: 0.95rem;
 }
 
 .auth-link {
     color: #fff;
     cursor: pointer;
+    font-weight: 500;
+    transition: color 0.2s ease;
 }
 
 .auth-link:hover {
+    color: var(--color-primary);
     text-decoration: underline;
 }
