@@ -53,7 +53,7 @@ const MOCK_ITEMS = [
         type: "movie",
         category: "now-showing",
         genre: "Action/Drama",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsblU3ACi51kST6HuHQDrcjFO0JSPVoXreCavZrH9jgfN5N38Z_snhfozd_w&s",
+        image: "https://m.media-amazon.com/images/M/MV5BNWY4NDgyN2QtNDRkZS00OGRjLWFhN2UtODc3Mzk2ZjQ0ZjhkXkEyXkFqcGc@._V1_.jpg",
         description: "An epic action saga set against coastal lands, which brief about the ripping and emotionally charged incidents in the periodic timeline.",
         duration: "2h 45m",
         rating: 4.6
@@ -64,7 +64,7 @@ const MOCK_ITEMS = [
         type: "movie",
         category: "now-showing",
         genre: "Superhero",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjvUr-SGHEjZJLydXm0x3aqhw3XqIFbm7Si6nLpPJupHYloSASELdpoT6s1M0&s",
+        image: "https://www.deccanchronicle.com/h-upload/2024/01/17/1071102-hanuman.jpg",
         description: "An imaginary place called Anjanadri where the protagonist gets the powers of Hanuman and fights for Anjanadri.",
         duration: "2h 38m",
         rating: 4.7
@@ -75,7 +75,7 @@ const MOCK_ITEMS = [
         type: "movie",
         category: "now-showing",
         genre: "Action/Drama",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRW8rghB1T-Ux88CgC1zHK0cgaof_0w86njYM1KfXdrVPTqpBlfqJvQgI8Feg&s",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqkijelZN4eu2FOLOQzTCU91jriGMN9f92Sw&s",
         description: "A story about a man who is the king of the underworld of Guntur city.",
         duration: "2h 39m",
         rating: 4.2
@@ -86,7 +86,7 @@ const MOCK_ITEMS = [
         type: "movie",
         category: "now-showing",
         genre: "Comedy/Crime",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWNW_aX6l93ABtwweke37IzouidwVnPoeTeFn127qEOseU8FHRcTLsJl2lSWU&s",
+        image: "https://upload.wikimedia.org/wikipedia/en/thumb/2/26/Tillu_Square_Teaser.jpeg/250px-Tillu_Square_Teaser.jpeg",
         description: "Sequel to DJ Tillu. Tillu's life takes a new turn after a mysterious murder.",
         duration: "2h 5m",
         rating: 4.5
@@ -97,7 +97,7 @@ const MOCK_ITEMS = [
         type: "movie",
         category: "now-showing",
         genre: "Political Action",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvTIBNLvF827e2NMcAlfg6dmPQhKt5HlSqUbcT6osMMv5nngMY2th5-XjOXL0&s",
+        image: "https://www.cinejosh.com/newsimg/newsmainimg/game-changer-to-touch-the-burning-issue_b_1911240431.jpg",
         description: "A political action drama where an honest IAS officer fights against valid corruption in the political system.",
         duration: "2h 50m",
         rating: 4.6
@@ -108,7 +108,7 @@ const MOCK_ITEMS = [
         type: "movie",
         category: "now-showing",
         genre: "Action/Gangster",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiehMY-UEDzYhFFA3R4xC0NKAzfWTu3BwtyJqfvJ04KnpxVuvH0YopeLfwi7A&s",
+        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJfVDzbnO1wWDoIHZ-fo8tvUd0wswAR9NBzg&s",
         description: "A ruthless gangster returns to Mumbai to finish his unfinished business.",
         duration: "2h 40m",
         rating: 4.7
@@ -119,7 +119,7 @@ const MOCK_ITEMS = [
         type: "movie",
         category: "now-showing",
         genre: "Action/Drama",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYP20iCtNApZ9A8uteCrkfMYeAlYXB6H0KMudLPDh66b1QdKQijQNkfVdY_jw&s",
+        image: "https://sund-images.sunnxt.com/201573/640x360_BhagavanthKesari_201573_81e656b3-9f00-4f49-a7ad-05767d0e7657.jpg",
         description: "Nelakonda Bhagavanth Kesari is adamant about getting his daughter into the army to make her strong.",
         duration: "2h 35m",
         rating: 4.4
@@ -130,7 +130,7 @@ const MOCK_ITEMS = [
         type: "movie",
         category: "now-showing",
         genre: "Romance/Drama",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcEctpUxrKPl1ngnWRqtZwtutl94D5OIhKDNhFt22GgBCIeRd-2zXad5MrYQ&s",
+        image: "https://resizing.flixster.com/oz1eiu6oUX1aHvFvmhQVqfXBb7g=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p26118227_v_v13_aa.jpg",
         description: "A single father lives with his 6-year-old daughter. Their life changes when a woman saves the daughter from an accident.",
         duration: "2h 35m",
         rating: 4.8
@@ -141,7 +141,7 @@ const MOCK_ITEMS = [
         type: "movie",
         category: "now-showing",
         genre: "Action/Drama",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNqMsKCrIBaOj9568iLHeQap7jFlvu0P_eW3onRoErM9AePh5Wmg8E91MO_w&s",
+        image: "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/dasara-et00316318-1679638362.jpg",
         description: "Dharani faces several hurdles after he stands up against the village headmen.",
         duration: "2h 36m",
         rating: 4.5
@@ -152,7 +152,7 @@ const MOCK_ITEMS = [
         type: "movie",
         category: "now-showing",
         genre: "Horror/Thriller",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShDeqfrxFbBvNiwMFlhulOgwjsC26HRrpFuXUVxwOJxbemYWkkAWKPzZNRsos&s",
+        image: "https://m.media-amazon.com/images/M/MV5BNGVjNjgwNGYtMzFkNS00YTU1LWIzNjAtMDI4ODFhNjlkODRlXkEyXkFqcGc@._V1_.jpg",
         description: "Mysterious deaths occur in a village due to an unknown person's occult practice.",
         duration: "2h 25m",
         rating: 4.6
@@ -163,7 +163,7 @@ const MOCK_ITEMS = [
         type: "movie",
         category: "now-showing",
         genre: "Action/Comedy",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4unR1emuR-2ldaPtVonWkE4Y_zWgezqrrRKKZt4mEuuQn_Q9YA7uB5yXSwgM&s",
+        image: "https://m.media-amazon.com/images/M/MV5BNmExZjk3NTAtMWM0ZC00NjM0LWExY2ItZGZjYWY0ZDI2NWM3XkEyXkFqcGc@._V1_.jpg",
         description: "A fisherman who smuggles goods gets involved in a bigger plot.",
         duration: "2h 40m",
         rating: 4.3
@@ -174,7 +174,7 @@ const MOCK_ITEMS = [
         type: "movie",
         category: "now-showing",
         genre: "Action/Crime",
-        image: "https://m.media-amazon.com/images/M/MV5BNGViM2M4NmUtMmNkNy00MTQ5LTk5MDYtNmNhODAzODkwOTJlXkEyXkFqcGdeQXVyMTY1NjAyNjU4._V1_.jpg",
+        image: "https://m.media-amazon.com/images/M/MV5BZThmNDg1NjUtNWJhMC00YjA3LWJiMjItNmM4ZDQ5ZGZiN2Y2XkEyXkFqcGc@._V1_.jpg",
         description: "A son's ardent love for his father. Often away on work, the father is unable to comprehend the intensity of his son's love.",
         duration: "3h 21m",
         rating: 4.6
@@ -185,7 +185,7 @@ const MOCK_ITEMS = [
         type: "movie",
         category: "now-showing",
         genre: "Action/Thriller",
-        image: "https://m.media-amazon.com/images/M/MV5BMmU1Y2Y3NjMtM2YwOS00YTE2LTg0Y2UtYzdmMWVlYmRmY2Y4XkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
+        image: "https://preview.redd.it/leo-2023-review-forum-thread-spoilers-must-be-tagged-v0-be5vpks10xob1.jpg?width=1348&format=pjpg&auto=webp&s=a6987ed21bf19da051d6c37c461b476d40b897b2",
         description: "A mild-mannered cafe owner becomes a local hero through an act of violence, which sets off consequences with a dangerous gang.",
         duration: "2h 44m",
         rating: 4.5
@@ -267,7 +267,7 @@ const MOCK_ITEMS = [
         type: "movie",
         category: "upcoming",
         genre: "Epic/Mythology",
-        image: "https://m.media-amazon.com/images/M/MV5BNDYwNjU5YmYtYjYxNy00YmY5LWIyYzYtZDljNjAwYjIyYjRkXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg",
+        image: "https://www.hindustantimes.com/ht-img/img/2024/11/06/1600x900/ranbir_kapoor_1730870029605_1730870040161.jpg",
         description: "An epic mythological drama based on the ancient Indian epic Ramayana.",
         duration: "TBA",
         rating: 0,
