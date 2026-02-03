@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-// Mock Data - Expanded Catalog
+// Mock Data - Expanded Catalog    
 const MOCK_ITEMS = [
     // --- Now Showing ---
     {
