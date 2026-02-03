@@ -42,7 +42,7 @@ const MOCK_ITEMS = [
         type: "movie",
         category: "now-showing",
         genre: "Action/Crime",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTJr3X-J0iyhwqweZIgFNB4WvvU5xSNz_uRplyblX7zTfUsM4I7oMQ-ruzbmo&s",
+        image: "https://filmfare.wwmindia.com/content/2024/nov/pushpa231731829450.jpg",
         description: "Pushpa Raj raises his ranks in the smuggling syndicate of red sanders causing violence and bloodshed.",
         duration: "3h 0m",
         rating: 4.8
